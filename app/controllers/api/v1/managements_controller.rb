@@ -30,21 +30,21 @@ module Api::V1
 
 		# PUT Management resource
     def update
-			if params[:id] && params[:area] && params[:grade]
-       	updated_management = Management.where(id: params[:id]).first
-				unless updated_management.nil?
-					updated_management.update(management_params)
-					if updated_management.save
-						render json: updated_management
-					else
-						# Grade under 0
-						render json: { message: "Ocurrió un error inesperado, reintente nuevamente.", status: 404 }		
-					end
-				end	
-			else 
-				render json: { message: "Faltan parámetros para update de recurso.", status: 404 }
-			end
-	 	end
+      if params[:id] && params[:area] && params[:grade]
+        updated_management = Management.where(id: params[:id]).first
+	unless updated_management.nil?
+	  updated_management.update(management_params)
+	  if updated_management.save
+	    render json: updated_management
+	  else
+	  # Grade under 0
+	    render json: { message: "Ocurrió un error inesperado, reintente nuevamente.", status: 404 }		
+	  end
+         end	
+       else 
+         render json: { message: "Faltan parámetros para update de recurso.", status: 404 }
+       end
+     end
 
     private
       def management_params
