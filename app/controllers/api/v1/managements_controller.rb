@@ -1,6 +1,6 @@
 module Api::V1
   class ManagementsController < ApiController
-
+    
     # GET / POST Management resource
     def managements
       if request.get?

@@ -1,24 +1,37 @@
-# README
+# Rankmi test :octocat:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repositorio que responde a test técnico "Rankmi". Se busca una estructura jerárquica en la cual cada gerencia/departamento contenga un promedio de notas dado por sus departamentos hijos que deberá refrescarse al crearse un nuevo recurso.
 
-Things you may want to cover:
+## Herramientas :pushpin:
 
-* Ruby version
+1. Rails 5 in api mode. 
+2. Tree structure: Gema 'Ancestry' https://github.com/stefankroes/ancestry.
+3. Postgresql como database adapter.
 
-* System dependencies
+## Instalación básica de base de datos :pushpin:
+```
+    rake db:create
+    rake db:migrate
+    rake db:seed
+```
+## Endpoints disponibles :pushpin:
 
-* Configuration
+> Consideraciones:
 
-* Database creation
+    1. Sólo podrá ser creado un departamento/gerencia no existente. (POST)
+    2. No se permiten grades inferiores a 0. (Existe validación)
 
-* Database initialization
+- GET: 'api/v1/managements'. Devuelve un JSON con árbol jerárquico. 
 
-* How to run the test suite
+- POST: 'api/v1/managements'. Crea un nuevo recurso.
+> Params requeridos:
+    - parent_id: integer
+    - area: string
+    - grade: float
 
-* Services (job queues, cache servers, search engines, etc.)
+- PUT: 'api/v1/managements/:management_id/update. Actualiza un nuevo recurso.
+> Params requeridos:
+    - id: integer
+    - area: string
+    - grade: string
 
-* Deployment instructions
-
-* ...
