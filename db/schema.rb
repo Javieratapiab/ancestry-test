@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171014193028) do
-
+ActiveRecord::Schema.define(version: 20_171_014_193_028) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "managements", force: :cascade do |t|
-    t.float "grade", default: 0.0
-    t.string "area"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "ancestry"
-    t.index ["ancestry"], name: "index_managements_on_ancestry"
+  create_table 'managements', force: :cascade do |t|
+    t.float 'grade', default: 0.0
+    t.string 'area'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'ancestry'
+    t.index ['ancestry'], name: 'index_managements_on_ancestry'
   end
-
 end

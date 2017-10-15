@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       # METHODS
-      match '/managements' => '/api/v1/managements#managements', via: [:get, :post]
+      match '/managements' => '/api/v1/managements#managements', via: %i[get post]
       put '/managements/:id/update' => '/api/v1/managements#update', via: [:put]
     end
-  end   
+  end
 end
