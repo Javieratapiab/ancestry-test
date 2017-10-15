@@ -8,7 +8,12 @@ Repositorio que responde a test técnico "Rankmi". Se busca una estructura jerá
 2. Tree structure: Gema 'Ancestry' https://github.com/stefankroes/ancestry.
 3. Postgresql como database adapter.
 
-## Instalación básica de base de datos :pushpin:
+## Instalación inicial
+```
+    bundle install
+```
+
+##  Instalación básica de base de datos :pushpin:
 ```
     rake db:create
     rake db:migrate
