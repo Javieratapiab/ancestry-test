@@ -21,5 +21,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Handle tree structure
 gem 'ancestry'
-# JSON format
-gem 'active_model_serializers', '~> 0.10.0'
