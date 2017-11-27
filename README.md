@@ -1,6 +1,6 @@
-# Rankmi test :octocat:
+# Ancestry test :octocat:
 
-Repositorio que responde a test técnico "Rankmi". Se busca una estructura jerárquica en la cual cada gerencia/departamento contenga un promedio de notas dado por sus departamentos hijos que deberá refrescarse al crearse un nuevo recurso.
+Se busca una estructura jerárquica en la cual cada gerencia/departamento contenga un promedio de notas dado por sus departamentos hijos que deberá refrescarse al crearse un nuevo recurso.
 
 ## Herramientas :pushpin:
 
